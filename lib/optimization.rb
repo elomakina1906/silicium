@@ -79,8 +79,9 @@ module Silicium
       return step[i] / 2.0 if cur_f >= prev_f #you can switch 2.0 on something else
       step[i]
     end
+
     # Hook - Jeeves method for find minimum point (x - array of start variables, step - step of one iteration, eps - allowable error, alfa - slowdown of step,
-    # block - function which takes array x, WAENING function doesn't control  correctness of input
+    # block - function which takes array x, WARNING function doesn't control  correctness of input
     def hook_jeeves(x, step, eps = 0.1, &block)
       prev_f = block.call(x)
       acc = accuracy(step)
@@ -114,7 +115,7 @@ module Silicium
       [a, b, c]
     end
 
-    # find root in [a, b], if he exist, if number of iterations > iters -> error
+    # finds root in [a, b], if it exists, if number of iterations > iters -> error
     def half_division(a, b, eps = 0.001, &block)
       iters = 1000000
       c = middle(a, b)
@@ -124,7 +125,7 @@ module Silicium
         b = tmp[1]
         c = tmp[2]
         iters -= 1
-        raise RuntimeError, 'Root not found! Check does he exist, or change eps or iters' if iters == 0
+        raise RuntimeError, 'Root not found! Check does it exist or change eps or iters' if iters == 0
       end
       c
     end
