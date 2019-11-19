@@ -33,34 +33,34 @@ Or install it yourself as:
 Contains 7 different methods of optimization
 
 functions of activation:
-sigmoid(x) = 1.0 / (1 + Math.exp(-x))
-relu(x) = max(0, x)
+`sigmoid(x) = 1.0 / (1 + Math.exp(-x))`
+`relu(x) = max(0, x)`
 
-integrating_Monte_Carlo_base(a, b, n = 100000, &block) is a standart method of integration "Monte Carlo"
+`integrating_Monte_Carlo_base(a, b, n = 100000, &block)` is a standart method of integration "Monte Carlo"
 a, b - integrating limits, n - amount of random numbers
-learn more about Monte Carlo method: https://ru.wikipedia.org/wiki/Метод_Монте-Карло
+learn more about Monte Carlo method: https://en.wikipedia.org/wiki/Monte_Carlo_method
 
-sorted?(a) returns true if the array (a) is sorted and false otherway
+`sorted?(a)` returns true if the array (a) is sorted and false otherway
 
-bogosort!(a) sorts sequence (a), modify it
-bogosort(a) sorts sequence (a), doesn't modify it
-learn more about bogosort: https://ru.wikipedia.org/wiki/Bogosort
+`bogosort!(a)` sorts sequence (a), modify it
+`bogosort(a)` sorts sequence (a), doesn't modify it
+learn more about bogosort: https://en.wikipedia.org/wiki/Bogosort
 
-hook_jeeves(x, step, eps = 0.1, &block) searches for an unconditional local extremum of a function
-learn more about Hook Jeeves method: https://ru.wikipedia.org/wiki/Bogosort
+`hook_jeeves(x, step, eps = 0.1, &block)` searches for an unconditional local extremum of a function
+learn more about Hook Jeeves method: https://web.stanford.edu/group/sisl/k12/optimization/MO-unit2-pdfs/2.11minimum3D2hooke-jeeves.pdf
 
-half_division(a, b, eps = 0.001, &block)
+`half_division(a, b, eps = 0.001, &block)`
 finds root in [a, b], if it exists
 if number of iterations > iters -> error
-learn more about half division: https://math.semestr.ru/optim/dichotomy.php
+learn more about half division: https://en.wikipedia.org/wiki/Division_algorithm
 
-determinant_sarryus(matrix)
+`determinant_sarryus(matrix)`
 finds determinant 3x3 matrix
-learn more about Sarryus method for matrix determinant: https://ru.wikipedia.org/wiki/Правило_Саррюса
+learn more about Sarryus method for matrix determinant: https://en.wikipedia.org/wiki/Rule_of_Sarrus
 
-simulated_annealing(min_board, max_board, t = 10000, &block)
+`simulated_annealing(min_board, max_board, t = 10000, &block)`
 annealing method to find min of function with one argument, between min_board max_board
-learn more about simulated sarryus: https://ru.wikipedia.org/wiki/Алгоритм_имитации_отжига
+learn more about simulated sarryus: https://en.wikipedia.org/wiki/Simulated_annealing
 
 #### Combinatorics
 Module with usual combinatorics formulas
